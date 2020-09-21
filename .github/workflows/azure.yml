@@ -39,10 +39,8 @@ jobs:
         # Build and test the project, then
         # deploy to Azure Web App.
         npm install
-    - uses: mayurrawte/github-angular-actions@latest
-      name: Use Node.js ${{ env.NODE_VERSION }}
         npm install -g @angular/cli
-        ng build
+        npm build
     - name: 'Deploy to Azure WebApp'
       uses: azure/webapps-deploy@v2
       with:
