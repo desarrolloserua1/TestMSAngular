@@ -40,6 +40,7 @@ jobs:
         # deploy to Azure Web App.
         npm install
     - uses: mayurrawte/github-angular-actions@latest
+      name: Use Node.js ${{ env.NODE_VERSION }}
         npm install -g @angular/cli
         ng build
     - name: 'Deploy to Azure WebApp'
