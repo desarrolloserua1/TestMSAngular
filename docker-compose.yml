@@ -1,0 +1,17 @@
+version: '2.3'
+services:
+    expressapi4compose:
+      image: edwincaro10/expressapi4compose:lastest
+      container_name: expressapi4compose
+      volumes:
+        - ${WEBAPP_STORAGE_HOME}/site/wwwroot:/app
+      restart: always
+      ports:
+        - "3000:3000"
+
+    vue4composer:
+      image: edwincaro10/vue4composer:latest
+      container_name: vue4composer
+      restart: always
+      volumes:
+          - ${WEBAPP_STORAGE_HOME}/site:/vue
