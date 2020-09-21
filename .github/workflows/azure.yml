@@ -12,7 +12,7 @@ env:
   AZURE_SERVICE_PRINCIPAL_ID: ${{ secrets.AZURE_SERVICE_PRINCIPAL_ID }}
   AZURE_SERVICE_PRINCIPAL_PASSWORD: ${{ secrets.AZURE_SERVICE_PRINCIPAL_PASSWORD }}
   AZURE_SERVICE_PRINCIPAL_TENANT: ${{ secrets.AZURE_SERVICE_PRINCIPAL_TENANT }}
-  AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+  AZUREWEBAPPPUBLISHPROFILE: ${{ secrets.AZUREWEBAPPPUBLISHPROFILE }}
 
 jobs:
   build-and-deploy:
@@ -43,6 +43,6 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
         app-name: 'v-edcaroMyAngularApp'
-        publish-profile: $AZURE_WEBAPP_PUBLISH_PROFILE
+        publish-profile: $AZUREWEBAPPPUBLISHPROFILE
         package: .
 
